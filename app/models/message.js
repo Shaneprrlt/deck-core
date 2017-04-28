@@ -5,5 +5,6 @@ export default DS.Model.extend({
   body: DS.attr('string'),
   createdAt: DS.attr('datetime'),
   updatedAt: DS.attr('datetime'),
+
   user: DS.belongsTo('user')
 });
