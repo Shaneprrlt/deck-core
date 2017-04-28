@@ -9,7 +9,7 @@ export default DS.Model.extend({
   timezone: DS.attr('string'),
   phone: DS.attr('string'),
   channel: DS.attr('string'),
-  blocked: DS.attr('boolean')
+  blocked: DS.attr('boolean'),
 
   roles: DS.hasMany('role'),
   preference: DS.belongsTo('role')

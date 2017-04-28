@@ -9,7 +9,7 @@ export default DS.Model.extend({
   shareUrl: DS.attr('string'),
   channel: DS.attr('string'),
   createdAt: DS.attr('datetime'),
-  updatedAt: DS.attr('datetime')
+  updatedAt: DS.attr('datetime'),
   following: DS.attr('boolean'),
   createdAt: DS.attr('datetime'),
   updatedAt: DS.attr('datetime'),
