@@ -29,6 +29,9 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+    ENV['API_URL_PREFIX'] = 'http://';
+    ENV['API_URL_SUFFIX'] = '.lvh.me:3000';
   }
 
   if (environment === 'test') {
@@ -40,10 +43,15 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+
+    ENV['API_URL_PREFIX'] = 'https://';
+    ENV['API_URL_SUFFIX'] = '.deck-staging.herokuapp.com';
   }
 
   if (environment === 'production') {
 
+    ENV['API_URL_PREFIX'] = 'https://';
+    ENV['API_URL_SUFFIX'] = '.deckapi.io';
   }
 
   return ENV;
