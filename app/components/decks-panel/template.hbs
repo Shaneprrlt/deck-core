@@ -1,0 +1,19 @@
+<div class="columns is-gapless">
+  {{#if fullscreen}}
+
+    <div class="column">
+      {{decks-fullscreen fullscreen=fullscreen cards=cards apps=apps decks=decks}}
+    </div>
+
+  {{else}}
+
+    <div class="column is-4">
+      {{decks-drawer fullscreen=fullscreen cards=cards apps=apps decks=decks}}
+    </div>
+    <div class="column is-8">
+      {{yield}}
+    </div>
+
+  {{/if}}
+
+</div>

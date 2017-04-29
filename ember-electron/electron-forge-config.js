@@ -16,7 +16,13 @@ module.exports = {
     "app-copyright": "Copyright 2017 Deck, Inc.",
     "app-version": "1.0",
     "platform": "darwin",
-    "icon": "/public/app_icon@3x.png.icns"
+    "icon": "/public/app_icon@3x.png.icns",
+    "protocols": [
+      {
+        name: "Deck",
+        schemes: ["deck"]
+      }
+    ]
   },
   "electronWinstallerConfig": {
     "name": ""

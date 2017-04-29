@@ -9,8 +9,8 @@ export default DS.Model.extend({
   shareUrl: DS.attr('string'),
   channel: DS.attr('string'),
   following: DS.attr('boolean'),
-  createdAt: DS.attr('datetime'),
-  updatedAt: DS.attr('datetime'),
+  createdAt: DS.attr('date'),
+  updatedAt: DS.attr('date'),
 
   user: DS.belongsTo('user'),
   cardType: DS.belongsTo('cardType'),

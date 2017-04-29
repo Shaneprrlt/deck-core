@@ -60,8 +60,9 @@ app.on('ready', () => {
     console.log('The main window has become responsive again.');
   });
 
-  mainWindow.on('closed', () => {
-    mainWindow = null;
+  mainWindow.on('closed', (event) => {
+    //mainWindow = null;
+    event.preventDefault();
   });
 });
 
