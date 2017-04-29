@@ -1,5 +1,41 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: $avenir-lt-medium;
+  font-size: 18px;
+  height: 100%;
+}
+
+body > .ember-view {
+  height: 100%;
+}
+
+label {
+  font-size: 22px;
+}
+
+input[type=text],
+input[type=email],
+input[type=phone],
+input[type=password],
+input[type=file] {
+  font-family: $avenir-lt-medium;
+  font-size: 18px;
+  outline: none;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 8px;
+}
+
+.button, .button:hover {
+  color: #ffffff;
+  background-image: linear-gradient(-180deg, #63A5FF 0%, #1378DE 100%);
+  border: 1px solid #0065FF;
+  border-radius: 6px;
+  cursor: pointer;
 }

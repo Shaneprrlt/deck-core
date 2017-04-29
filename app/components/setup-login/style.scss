@@ -1,0 +1,58 @@
+& {
+  height: 100%;
+
+  .container.setup-login {
+    text-align: center;
+    background-color: $setup-background-color;
+    height: 100%;
+    display: flex;
+    color: $setup-text-color;
+    max-width: 100%;
+
+    .vertical-center {
+      height: auto;
+      align-self: center;
+      justify-content: center;
+      margin: auto;
+      max-width: 350px;
+
+      .columns {
+        .column {
+          margin: 25px 0px;
+        }
+      }
+
+      .columns:nth-child(1) {
+        .column {
+          font-size: 25px;
+        }
+      }
+
+      .columns:nth-child(2) {
+        .column {
+          label {
+            display: block;
+            line-height: 50px;
+          }
+
+          div {
+            margin: 10px 0px;
+          }
+        }
+      }
+
+      .columns:nth-child(3) {
+        .column {
+          a:link, a:visited {
+            color: #ffffff;
+          }
+
+          a:hover, a:active {
+            color: #ffffff;
+          }
+        }
+      }
+
+    }
+  }
+}

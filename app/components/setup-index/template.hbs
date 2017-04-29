@@ -1,0 +1,31 @@
+<div class="container setup-index">
+
+  <div class="vertical-center">
+
+    <div class="columns is-gapless">
+      <div class="column">
+        <img src="assets/app_icon@3x.png" height=80 />
+        <h1>Deck</h1>
+      </div>
+    </div>
+
+    <div class="columns is-gapless">
+      <div class="column">
+        <label>Find Your Team</label>
+        {{input type="text" value=subdomain}}
+        {{#if error}}
+          <p><small>{{error}}</small></p>
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="columns is-gapless">
+      <div class="column">
+        <p>Just getting started? Get your
+          company setup on Deck.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

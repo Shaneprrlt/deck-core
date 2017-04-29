@@ -1,0 +1,39 @@
+<div class="container setup-login">
+
+  <div class="vertical-center">
+
+    <div class="columns">
+      <div class="column">
+        <h2>{{team.subdomain}}.deckapp.io</h2>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <label>Welcome</label>
+        <div>{{input type="text" value=email placeholder="Email address"}}</div>
+        <div>{{input type="password" value=password placeholder="Password"}}</div>
+        <div class="button" {{action 'login'}}>
+          <span>Login</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns">
+      <div class="column">
+        <div>
+          {{#link-to 'setup.forgot-password'}}
+            Forgot your password?
+          {{/link-to}}
+        </div>
+        <div>
+          {{#link-to 'setup.register'}}
+            Have an invitation?
+          {{/link-to}}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

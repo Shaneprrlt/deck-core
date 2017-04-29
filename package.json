@@ -1,9 +1,9 @@
 {
   "name": "deck",
-  "version": "0.0.0",
-  "description": "Small description for deck goes here",
+  "version": "1.0.0",
+  "description": "Deck Desktop App",
   "license": "MIT",
-  "author": "",
+  "author": "Deck, Inc.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -45,6 +45,7 @@
     "ember-export-application-global": "^1.0.5",
     "ember-font-awesome": "3.0.5",
     "ember-load-initializers": "^0.6.0",
+    "ember-local-storage": "1.3.6",
     "ember-resolver": "^2.0.3",
     "ember-simple-auth": "1.2.2",
     "ember-source": "~2.11.0",

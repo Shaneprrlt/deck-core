@@ -1,6 +1,7 @@
 {
   "name": "deck",
   "dependencies": {
-    "bulma": "0.1.2"
+    "bulma": "0.1.2",
+    "blob-polyfill": "^1.0.20150320"
   }
 }
