@@ -13,6 +13,9 @@
         <label>Welcome</label>
         <div>{{input type="text" value=email placeholder="Email address"}}</div>
         <div>{{input type="password" value=password placeholder="Password"}}</div>
+        {{#if error}}
+          <div><small>{{error}}</small></div>
+        {{/if}}
         <div class="button" {{action 'login'}}>
           <span>Login</span>
         </div>

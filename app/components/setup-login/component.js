@@ -18,11 +18,8 @@ export default Ember.Component.extend({
       let _this = this,
         email = this.get('email'),
         password = this.get('password');
-
-      debugger;
-
+        
       this.get('session').authenticate('authenticator:oauth2', email, password).catch(function(reason) {
-        debugger;
         _this.set('error', 'Invalid login.');
       })
     }
