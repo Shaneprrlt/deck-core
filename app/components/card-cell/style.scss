@@ -11,14 +11,23 @@
   cursor: pointer;
   transition: background .25s;
 
-  .columns:nth-child(1) {
+  .level {
     height: auto !important;
 
-    .column {
+    .level-item {
       .title {
         font-size: 15px;
         line-height: 20px;
       }
+      .occurences {
+        font-size: 14px;
+        color: #3B3B3B;
+        font-family: $avenir-lt-light;
+      }
+    }
+
+    .level-item:nth-child(1) {
+      font-size: 18px;
     }
   }
 }

@@ -1,9 +1,20 @@
-<div class="columns">
-  <div class="column is-3">
+<div class="level">
+  <div class="level-left">
+    <div class="level-item">
 
-  </div>
+      {{#if isFeature}}
+        <span class="icon-feature"></span>
+      {{/if}}
 
-  <div class="column is-9">
-    <div class="title">{{card.title}}</div>
+      {{#if isBug}}
+        <span class="icon-bug"></span>
+      {{/if}}
+
+
+    </div>
+    <div class="level-item">
+      <div class="title">{{card.title}}</div>
+      <div class="occurences">{{occurence-message card.occurences}}</div>
+    </div>
   </div>
 </div>
