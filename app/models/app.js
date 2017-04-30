@@ -5,5 +5,11 @@ export default DS.Model.extend({
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date'),
 
-  developers: DS.hasMany('user')
+  developers: DS.hasMany('user'),
+
+  findCards() {
+    let modelName = this.constructor.modelName;
+    let adapter = this.store.adapterFor(modelName);
+    return adapter.findCards(this.get('id'));
+  }
 });

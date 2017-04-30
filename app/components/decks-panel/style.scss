@@ -1,0 +1,11 @@
+& {
+  height: calc(100% - 63px);
+
+  .columns {
+    height: 100%;
+
+    .column {
+      height: 100%;
+    }
+  }
+}

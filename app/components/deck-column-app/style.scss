@@ -1,0 +1,29 @@
+& {
+  height: 100%;
+  width: 33%;
+  display: inline-block;
+  overflow-y: hidden;
+
+  .columns:nth-child(1) {
+    height: 100%;
+    overflow-y: hidden;
+
+    .column {
+      overflow-y: hidden;
+
+      .deck-title {
+        text-align: center;
+        font-size: 16px;
+        font-family: $avenir-lt-heavy;
+        line-height: 40px;
+      }
+
+      .cards {
+        overflow-y: scroll;
+        height: 100%;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+}

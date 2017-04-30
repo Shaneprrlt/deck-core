@@ -1,0 +1,26 @@
+& {
+  height: 100%;
+  background: $decks-background-color;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+
+  .deck-columns-titlebar {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    border-bottom: 1px solid $decks-border-color;
+  }
+  .deck-columns {
+    position: absolute;
+    z-index: 200;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100%;
+    width: 100%;
+  }
+}

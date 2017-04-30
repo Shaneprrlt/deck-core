@@ -1,0 +1,28 @@
+& {
+  background: $card-background-color;
+  border: 1px solid $card-border-color;
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+  max-width: 260px;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  white-space: normal;
+  cursor: pointer;
+  transition: background .25s;
+
+  .columns:nth-child(1) {
+    height: auto !important;
+
+    .column {
+      .title {
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+&:hover {
+  background:  darken($card-background-color, 8%);
+}

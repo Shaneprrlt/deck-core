@@ -1,1 +1,14 @@
-{{yield}}
+<div class="deck-columns-titlebar"></div>
+<div class="deck-columns">
+
+  <!-- App Decks -->
+  {{#each apps as |app|}}
+    {{deck-column-app app=app}}
+  {{/each}}
+
+  <!-- Decks -->
+  {{#each decks as |deck|}}
+    {{deck-column deck=deck}}
+  {{/each}}
+
+</div>
