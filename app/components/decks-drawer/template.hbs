@@ -8,7 +8,7 @@
   </div>
 
   {{#if menuOpen}}
-    {{deck-drawer-menu menuOpen=menuOpen apps=apps decks=decks selectedApp=selectedApp selectedDeck=selectedDeck clearSelected=(action 'clearSelected')}}
+    {{deck-drawer-menu apps=apps decks=decks}}
   {{/if}}
 
   {{#if selectedApp}}

@@ -8,20 +8,6 @@ export default Ember.Service.extend({
   store: Ember.inject.service(),
   casino: storageFor('casino'),
 
-  selectedApp: Ember.computed('casino.selectedAppId', function() {
-    let appId = this.get('casino.selectedAppId');
-    if(appId) {
-      return this.get('store').peekRecord('app', appId);
-    }
-  }),
-
-  selectedDeck: Ember.computed('casino.selectedDeckId', function() {
-    let deckId = this.get('casino.selectedDeckId');
-    if(deckId) {
-      return this.get('store').peekRecord('deck', deckId);
-    }
-  });
-
   fullscreen: Ember.computed('casino.fullscreen', function() {
     return this.get('casino.fullscreen');
   }),
@@ -29,6 +15,9 @@ export default Ember.Service.extend({
   menuOpen: Ember.computed('casino.menuOpen', function() {
     return this.get('casino.menuOpen');
   }),
+
+  selectedApp: null,
+  selectedDeck: null,
 
   toggleFullscreen() {
     this.set('casino.fullscreen', !this.get('casino.fullscreen'));
@@ -40,17 +29,17 @@ export default Ember.Service.extend({
 
   setSelectedApp(app) {
     this.clearSelected();
-    this.set('casino.selectedAppId', app.get('id'));
+    this.set('selectedApp', app);
   },
 
   setSelectedDeck(deck) {
     this.clearSelected();
-    this.set('casino.selectedDeckId', deck.get('id'));
+    this.set('selectedDeck', deck);
   },
 
   clearSelected() {
-    this.set('casino.selectedAppId', null);
-    this.set('casino.selectedDeckId', null);
+    this.set('selectedApp', null);
+    this.set('selectedDeck', null);
   },
 
   openCardFromAppDeck(card, app) {
