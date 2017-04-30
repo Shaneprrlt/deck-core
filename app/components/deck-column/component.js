@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  classNameBindings: ['singleColumn'],
+
   deck: null,
 
   cards: Ember.computed('deck.cards.@each', function() {

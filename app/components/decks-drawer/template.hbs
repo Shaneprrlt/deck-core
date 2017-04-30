@@ -1,1 +1,32 @@
-{{yield}}
+<div class="deck-columns-titlebar"></div>
+<div class="deck-columns">
+
+  <div class="menu-toggle">
+    <div {{action 'toggleMenu'}}>
+      <span class="icon-filter"></span>
+    </div>
+  </div>
+
+  {{#if menuOpen}}
+    {{deck-drawer-menu menuOpen=menuOpen apps=apps decks=decks selectedApp=selectedApp selectedDeck=selectedDeck clearSelected=(action 'clearSelected')}}
+  {{/if}}
+
+  {{#if selectedApp}}
+    {{deck-column-app app=selectedApp singleColumn=true}}
+  {{/if}}
+
+  {{#if selectedDeck}}
+    {{deck-column deck=selectedDeck singleColumn=true}}
+  {{/if}}
+
+  {{#if menuOpen}}
+
+    <div class="fullscreen-toggle">
+      <div {{action 'toggleFullscreen'}}>
+        <span class="icon-grid"></span>
+      </div>
+    </div>
+
+  {{/if}}
+
+</div>

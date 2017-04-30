@@ -1,0 +1,26 @@
+<div class="columns">
+  <div class="column">
+    <ul>
+
+      {{#each apps as |app|}}
+        <li {{action 'setSelectedApp' app}}>
+          <span class="app-badge">{{fa-icon app.icon}}</span>
+          <span>{{app.name}}</span>
+        </li>
+      {{/each}}
+
+      {{#each decks as |deck|}}
+        <li {{action 'setSelectedDeck' deck}}>
+          <span>{{deck.title}}</span>
+        </li>
+      {{/each}}
+
+    </ul>
+  </div>
+</div>
+
+<div class="columns">
+  <div class="column">
+    <a href='#'>Add a Deck</a>
+  </div>
+</div>

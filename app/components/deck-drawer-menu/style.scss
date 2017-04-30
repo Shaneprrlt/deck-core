@@ -1,0 +1,45 @@
+& {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $decks-background-color;
+  z-index: 150;
+  padding: 25px;
+
+  .columns {
+    height: auto;
+
+  }
+
+  .columns:nth-child(1) {
+    .column {
+      font-size: 17px;
+
+      ul {
+        li {
+          margin: 5px 0px;
+          padding: 2px 5px;
+          border-radius: 8px;
+          cursor: pointer;
+        }
+        li:hover {
+          background-color: #eaeaea;
+        }
+      }
+    }
+  }
+
+  .columns:nth-child(2) {
+    position: absolute;
+    left: 25px;
+    bottom: 20px;
+
+    .column {
+      a:link, a:visited {
+        color: gray;
+      }
+    }
+  }
+}

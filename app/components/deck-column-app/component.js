@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  classNameBindings: ['singleColumn'],
+
   store: Ember.inject.service(),
 
   app: null,
