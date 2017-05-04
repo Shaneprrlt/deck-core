@@ -1,0 +1,28 @@
+& {
+  align-content: center;
+  font-size: 15px;
+  background-color: #dcdcdc;
+  border: 1px solid gray;
+  padding: 3px 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+
+  .delete.is-small {
+    align-self: center;
+    margin-left: 4px;
+  }
+}
+
+&.is-label {
+  color: #ffffff;
+  background-color: #88D7D4;
+  border-color: #88D7D4;
+}
+
+&.is-app {
+  color: #ffffff;
+  background-color: #AC8FE3;
+  border-color: #AC8FE3;
+}

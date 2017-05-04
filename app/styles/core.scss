@@ -24,14 +24,28 @@ input[type=text],
 input[type=email],
 input[type=phone],
 input[type=password],
-input[type=file] {
+input[type=file],
+select,
+textarea {
   font-family: $avenir-lt-medium;
-  font-size: 18px;
+  font-size: 16px;
   outline: none;
   padding: 10px;
   background-color: #ffffff;
   border: 1px solid #ffffff;
   border-radius: 8px;
+  height: 45px;
+}
+
+textarea {
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 200px;
+}
+
+select {
+  height: 45px;
+  border-radius: 8px !important;
 }
 
 .button, .button:hover {
@@ -40,4 +54,19 @@ input[type=file] {
   border: 1px solid #0065FF;
   border-radius: 6px;
   cursor: pointer;
+}
+
+a:link, a:visited {
+  color: #4990E2;
+  -webkit-transition: color .25s;
+  transition: color .25s;
+}
+
+a:hover, a:active {
+  color: darken(#4990E2, 10%);
+}
+
+/* Bulma Hero Fix */
+.hero.is-fullheight {
+  min-height: 100% !important;
 }

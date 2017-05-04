@@ -7,7 +7,12 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('app', function() {});
+  this.route('app', function() {
+    this.route('cards', function() {
+      this.route('new');
+      this.route('show', { path: '/:card_id' });
+    });
+  });
   this.route('setup', function() {
     this.route('login');
     this.route('register');

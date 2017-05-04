@@ -1,0 +1,25 @@
+<div class="level">
+  <div class="level-left">
+    <div class="level-item">
+      {{input type=text name="q" value=query}}
+    </div>
+  </div>
+</div>
+
+{{#if hasSearchResults}}
+  <div class="search-results">
+    <ul>
+      {{#each searchResults as |label|}}
+        {{label-pill card=card label=label}}
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
+
+<div class="card-labels">
+  <ul>
+    {{#each card.labels as |label|}}
+      {{label-pill card=card label=label}}
+    {{/each}}
+  </ul>
+</div>

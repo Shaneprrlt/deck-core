@@ -1,0 +1,93 @@
+<section class="hero is-fullheight">
+
+  <div class="hero-head">
+    <div class="level">
+      <div class="level-left" {{action 'back'}}>
+        <div class="level-item">
+          {{fa-icon 'chevron-left'}}
+        </div>
+        <div class="level-item">
+          <span>Create a Card</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-body">
+
+    <div>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            {{card-type-selector cardTypes=sortedCardTypes card=card}}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <label>Select an app</label>
+            <div>
+              <select onchange={{action (mut card.app) value="target.value"}}>
+                {{#each apps as |app|}}
+                  <option value={{app}}>{{app.name}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <label>Enter a title</label>
+            <div>
+              {{input type="text" value=card.title}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <label>Provide further details</label>
+            <div>
+              {{textarea value=card.description}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <label>Labels</label>
+            <div>
+              {{label-input card=card}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <div class="hero-foot">
+    <div class="level">
+      <div class="level-left"></div>
+      <div class="level-right">
+        <div class="level-item">
+          <div class="button" {{action 'createCard'}}>
+            <span>Create</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

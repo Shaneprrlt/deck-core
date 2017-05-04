@@ -1,6 +1,16 @@
 & {
   height: calc(100% - 63px);
 
+  input[type=text],
+  input[type=email],
+  input[type=password],
+  input[type=phone],
+  select,
+  textarea {
+    width: 100%;
+    border: 1px solid #dcdcdc !important;
+  }
+
   .columns {
     height: 100%;
 

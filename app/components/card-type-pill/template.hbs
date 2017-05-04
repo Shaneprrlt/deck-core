@@ -1,26 +1,24 @@
-<div class="status-toggle">
-  <span>👍</span>
-</div>
-
 <div class="level">
   <div class="level-left">
     <div class="level-item">
-
-      {{#if card.cardType.isFeature}}
+      {{#if cardType.isFeature}}
         <span class="icon-feature">
           <span class="path3"></span>
         </span>
       {{/if}}
 
-      {{#if card.cardType.isBug}}
+      {{#if cardType.isBug}}
         <span class="icon-bug"></span>
       {{/if}}
-
-
     </div>
     <div class="level-item">
-      <div class="title">{{card.title}}</div>
-      <div class="occurences">{{occurence-message card.occurences}}</div>
+      {{#if cardType.isFeature}}
+        New Feature
+      {{/if}}
+
+      {{#if cardType.isBug}}
+        Bug
+      {{/if}}
     </div>
   </div>
 </div>
