@@ -34,7 +34,7 @@ export default Ember.Component.extend({
       this.get('card.labels').pushObject(label);
     }
   },
-
+  
   actions: {
     delete() {
       if(this.get('isInCard')) {

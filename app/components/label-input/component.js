@@ -20,8 +20,12 @@ export default Ember.Component.extend({
     this._super(...arguments);
     let _this = this;
 
-    this.$().find("input[name=q]").on('keyup', function() {
-      _this.send('searchLabels');
+    this.$().find("input[name=q]").on('keyup', function(event) {
+      if(event.keyCode === 13) {
+        _this.send('createLabel');
+      } else {
+        _this.send('searchLabels');
+      }
     });
   },
 
@@ -39,10 +43,22 @@ export default Ember.Component.extend({
   },
 
   actions: {
+    createLabel() {
+      let _this = this,
+        query = this.get('query'),
+        label = this.get('store').createRecord('label', { title: query });
+
+      label.save().then(function(label) {
+        _this.get('card.labels').pushObject(label);
+      }).catch(function(error) {
+        // fail silently
+      });
+    },
+
     searchLabels() {
       let _this = this,
         query = this.get('query');
-      
+
       this.get('store').query('label', { q: query }).then(function(labels) {
         _this.set('searchResults', labels.filter(function(label) {
           return !_this.isInCard(label);
