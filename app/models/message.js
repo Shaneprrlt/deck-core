@@ -6,5 +6,6 @@ export default DS.Model.extend({
   createdAt: DS.attr('date'),
   updatedAt: DS.attr('date'),
 
+  card: DS.belongsTo('card'),
   user: DS.belongsTo('user')
 });

@@ -56,13 +56,14 @@ select {
   cursor: pointer;
 }
 
-a:link, a:visited {
+a:link, a:visited, span.link {
   color: #4990E2;
   -webkit-transition: color .25s;
   transition: color .25s;
+  cursor: pointer;
 }
 
-a:hover, a:active {
+a:hover, a:active, span.link:hover, span.link:active {
   color: darken(#4990E2, 10%);
 }
 

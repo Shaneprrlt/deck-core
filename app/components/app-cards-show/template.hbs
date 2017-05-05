@@ -1,0 +1,67 @@
+<div class="container scrollable">
+
+  <!-- Card Info -->
+  <section>
+
+    <div class="columns">
+      <div class="column is-1">
+
+        {{#if card.cardType.isFeature}}
+          <span class="icon-feature">
+            <span class="path3"></span>
+          </span>
+        {{/if}}
+
+        {{#if card.cardType.isBug}}
+          <span class="icon-bug"></span>
+        {{/if}}
+
+      </div>
+
+      <div class="column is-10">
+
+        <div>
+          <h2>{{card.title}}</h2>
+          <h3>Requested by <span class="link">@{{requester.username}}</span> on
+            <span class="link">{{app.name}}</span></h3>
+        </div>
+
+        <div>
+          <label>Description</label>
+          <p>{{card.description}}</p>
+        </div>
+
+        <div>
+          <label>Developers</label>
+          <ul>
+            {{#each developers as |developer|}}
+              <li><img src="https://placehold.it/100x100" height="30" /></li>
+            {{/each}}
+          </ul>
+        </div>
+
+        <div>
+          <label>Labels</label>
+          <ul>
+            {{#each labels as |label|}}
+              {{label-pill label=label}}
+            {{/each}}
+          </ul>
+        </div>
+
+      </div>
+      <div class="column is-1">
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Messages -->
+  <section>
+    {{messages-feed card=card}}
+  </section>
+
+</div>
+
+{{messages-form card=card}}
