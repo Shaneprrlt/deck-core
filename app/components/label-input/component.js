@@ -20,21 +20,34 @@ export default Ember.Component.extend({
     this._super(...arguments);
     let _this = this;
 
-    this.$().find("input[name=q]").on('keyup', function(event) {
+    this.$().find("input[name=q]").on('keyup', function() {
       _this.send('searchLabels');
     });
+  },
+
+  isInCard(label) {
+    let labelId = label.get('id'),
+      matches = [];
+
+    this.get('card.labels').forEach(function(label) {
+      if(label.get('id') === labelId) {
+        matches.pushObject(label);
+      }
+    });
+
+    return matches.length > 0;
   },
 
   actions: {
     searchLabels() {
       let _this = this,
         query = this.get('query');
-
+      
       this.get('store').query('label', { q: query }).then(function(labels) {
-        _this.set('searchResults', labels.map(function(label) {
-          return label;
+        _this.set('searchResults', labels.filter(function(label) {
+          return !_this.isInCard(label);
         }));
-      }).catch(function(error) {
+      }).catch(function() {
         _this.send('clearLabels');
       });
     },
