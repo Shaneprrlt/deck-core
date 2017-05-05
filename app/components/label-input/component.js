@@ -23,6 +23,7 @@ export default Ember.Component.extend({
     this.$().find("input[name=q]").on('keyup', function(event) {
       if(event.keyCode === 13) {
         _this.send('createLabel');
+        this.value = null;
       } else {
         _this.send('searchLabels');
       }
