@@ -12,6 +12,10 @@ Router.map(function() {
       this.route('new');
       this.route('show', { path: '/:card_id' });
     });
+
+    this.route('decks', function() {
+      this.route('new');
+    });
   });
   this.route('setup', function() {
     this.route('login');

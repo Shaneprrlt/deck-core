@@ -32,10 +32,20 @@
     }
   }
 
+  .click-surface {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 25;
+  }
+
   .status-toggle {
     position: absolute;
     right: 12px;
     bottom: 12px;
+    z-index: 50;
     background: #f5f5f5;
     padding: 2px 4px;
     border-radius: 3px;

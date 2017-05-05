@@ -10,16 +10,17 @@
   <div class="search-results">
     <ul>
       {{#each searchResults as |label|}}
-        {{label-pill card=card label=label}}
+        {{label-pill card=card deck=deck label=label}}
       {{/each}}
     </ul>
   </div>
 {{/if}}
 
+
 <div class="card-labels">
   <ul>
-    {{#each card.labels as |label|}}
-      {{label-pill card=card label=label}}
+    {{#each labels as |label|}}
+      {{label-pill card=card deck=deck label=label}}
     {{/each}}
   </ul>
 </div>

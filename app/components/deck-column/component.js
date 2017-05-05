@@ -4,6 +4,8 @@ export default Ember.Component.extend({
 
   classNameBindings: ['singleColumn'],
 
+  casino: Ember.inject.service(),
+  
   deck: null,
 
   cards: Ember.computed('deck.cards.@each', function() {
@@ -12,5 +14,12 @@ export default Ember.Component.extend({
 
   sortedProperties: ['createdAt:desc'],
   sortedCards: Ember.computed.sort('cards', 'sortedProperties'),
+
+  actions: {
+    openCard(card) {
+      let deck = this.get('deck');
+      this.get('casino').openCardFromDeck(card, deck);
+    }
+  }
 
 });

@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  routing: Ember.inject.service('-routing'),
   store: Ember.inject.service(),
   session: Ember.inject.service(),
 
@@ -14,6 +15,13 @@ export default Ember.Component.extend({
 
   sortProperties: ['id:asc'],
   sortedCardTypes: Ember.computed.sort('cardTypes', 'sortProperties'),
+
+  willDestroy() {
+    let card = this.get('card');
+    if(card.get('isNew')) {
+      card.unloadRecord();
+    }
+  },
 
   actions: {
     back() {
@@ -31,7 +39,9 @@ export default Ember.Component.extend({
 
       card.save()
         .then(function(card) {
-          debugger;
+            _this.get('routing').transitionTo('app.cards.show', [
+              card.get('id')
+            ])
           })
         .catch(function(error) {
           debugger;

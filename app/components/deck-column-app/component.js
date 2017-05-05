@@ -4,6 +4,7 @@ export default Ember.Component.extend({
 
   classNameBindings: ['singleColumn'],
 
+  casino: Ember.inject.service(),
   store: Ember.inject.service(),
 
   app: null,
@@ -11,7 +12,10 @@ export default Ember.Component.extend({
 
   sortProperties: ['createdAt:desc'],
   sortedCards: Ember.computed.sort('cards', 'sortProperties'),
-  
+  filteredCards: Ember.computed.filter('sortedCards', function(card) {
+    return card.get('isNew') === false;
+  }),
+
   setCards: Ember.observer('app', function() {
     let _this = this,
       app = this.get('app');
@@ -24,6 +28,13 @@ export default Ember.Component.extend({
         }
       });
     }
-  }).on('didInsertElement')
+  }).on('didInsertElement'),
+
+  actions: {
+    openCard(card) {
+      let app = this.get('app');
+      this.get('casino').openCardFromAppDeck(card, app);
+    }
+  }
 
 });

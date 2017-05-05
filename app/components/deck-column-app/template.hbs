@@ -6,8 +6,8 @@
 
     <div class="cards">
 
-      {{#each sortedCards as |card|}}
-        {{card-cell card=card}}
+      {{#each filteredCards as |card|}}
+        {{card-cell card=card openCard=(action 'openCard')}}
       {{/each}}
 
     </div>

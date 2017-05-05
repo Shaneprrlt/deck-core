@@ -1,0 +1,42 @@
+& {
+  height: 100%;
+
+  .hero {
+    padding: 20px;
+
+    .hero-head {
+
+      .level {
+        .level-left {
+          cursor: pointer;
+
+          .level-item:nth-child(1) > i {
+            font-size: 15px;
+            line-height: 35px !important;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .hero-body {
+
+      div {
+        width: 100%;
+
+        section {
+          margin-bottom: 15px;
+          text-align: left;
+          width: 400px;
+          margin: auto;
+
+          label {
+            display: block;
+            font-size: 16px;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+  }
+}

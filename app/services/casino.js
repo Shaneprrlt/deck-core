@@ -30,11 +30,13 @@ export default Ember.Service.extend({
   setSelectedApp(app) {
     this.clearSelected();
     this.set('selectedApp', app);
+    this.set('casino.menuOpen', false);
   },
 
   setSelectedDeck(deck) {
     this.clearSelected();
     this.set('selectedDeck', deck);
+    this.set('casino.menuOpen', false);
   },
 
   clearSelected() {
@@ -44,12 +46,16 @@ export default Ember.Service.extend({
 
   openCardFromAppDeck(card, app) {
     this.setSelectedApp(app);
-    this.get('routing').transitionTo('app.index.cards.show', card);
+    this.get('routing').transitionTo('app.cards.show', [
+      card.get('id')
+    ]);
   },
 
-  openCardFromDeck(deck, card) {
+  openCardFromDeck(card, deck) {
     this.setSelectedDeck(deck);
-    this.get('routing').transitionTo('app.index.cards.show', card);
+    this.get('routing').transitionTo('app.cards.show', [
+      card.get('id')
+    ]);
   }
 
 });

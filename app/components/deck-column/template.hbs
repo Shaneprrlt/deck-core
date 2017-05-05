@@ -7,7 +7,7 @@
     <div class="cards">
 
       {{#each sortedCards as |card|}}
-        {{card-cell card=card}}
+        {{card-cell card=card openCard=(action 'openCard')}}
       {{/each}}
 
     </div>

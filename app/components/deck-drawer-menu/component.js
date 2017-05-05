@@ -9,15 +9,11 @@ export default Ember.Component.extend({
 
   actions: {
     setSelectedApp(app) {
-      this.get('casino').clearSelected();
-      this.set('casino.selectedApp', app);
-      this.get('casino').toggleMenu();
+      this.get('casino').setSelectedApp(app);
     },
 
     setSelectedDeck(deck) {
-      this.get('casino').clearSelected();
-      this.set('casino.selectedDeck', deck);
-      this.get('casino').toggleMenu();
+      this.get('casino').setSelectedDeck(deck);
     }
   }
 

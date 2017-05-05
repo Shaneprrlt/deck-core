@@ -1,0 +1,59 @@
+<section class="hero is-fullheight">
+
+  <div class="hero-head">
+    <div class="level">
+      <div class="level-left" {{action 'back'}}>
+        <div class="level-item">
+          {{fa-icon 'chevron-left'}}
+        </div>
+        <div class="level-item">
+          <span>Create a Deck</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-body">
+
+    <div>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <label>Enter a title for this deck</label>
+            <div>
+              {{input type="text" value=deck.title}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <label>What are the apps/tags you want to filter by?</label>
+            <div>
+              {{label-input deck=deck}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <div class="hero-foot">
+    <div class="level">
+      <div class="level-left"></div>
+      <div class="level-right">
+        <div class="level-item">
+          <div class="button" {{action 'createDeck'}}>
+            <span>Create</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
