@@ -30,9 +30,10 @@
           <div class="column">
             <label>Select an app</label>
             <div>
-              <select onchange={{action (mut card.app) value="target.value"}}>
+              <select onchange={{action "selectApp" value="target.value"}}>
+                <option disabled="true" selected="true">Select an app</option>
                 {{#each apps as |app|}}
-                  <option value={{app}}>{{app.name}}</option>
+                  <option value={{app.id}}>{{app.name}}</option>
                 {{/each}}
               </select>
             </div>

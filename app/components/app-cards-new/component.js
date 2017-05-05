@@ -20,8 +20,22 @@ export default Ember.Component.extend({
       window.history.back();
     },
 
+    selectApp(appId) {
+      let app = this.get('store').peekRecord('app', appId);
+      this.set('card.app', app);
+    },
+
     createCard() {
-      debugger;
+      let _this = this,
+        card = this.get('card');
+
+      card.save()
+        .then(function(card) {
+          debugger;
+          })
+        .catch(function(error) {
+          debugger;
+          });
     }
   }
 

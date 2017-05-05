@@ -18,11 +18,9 @@
       </div>
 
       <div class="level-item">
-        {{#link-to 'app.cards.new'}}
-          <div class="button">
-            <span>Create Card</span>
-          </div>
-        {{/link-to}}
+        <div class="button" {{action 'openCreateCard'}}>
+          <span>Create Card</span>
+        </div>
       </div>
       <div class="level-item">
         {{notification-bell notifications=notifications}}
