@@ -25,7 +25,7 @@ export default Ember.Component.extend({
     }
   }),
 
-  clearSearchResult: Ember.observer('card.labels.@each', function() {
+  clearSearchResult: Ember.observer('card.labels.@each', 'deck.labels.@each', function() {
     this.send('clearLabels');
   }),
 
