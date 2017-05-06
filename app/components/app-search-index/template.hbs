@@ -1,0 +1,17 @@
+<div class="level">
+  <div class="level-left">
+    <div class="level-item">
+      <span>Search Results for "{{query}}":</span>
+    </div>
+  </div>
+</div>
+
+<div class="columns is-gapless">
+  <div class="column is-8">
+    <ul>
+      {{#each searchResults as |searchResult|}}
+        {{search-result searchResult=searchResult}}
+      {{/each}}
+    </ul>
+  </div>
+</div>

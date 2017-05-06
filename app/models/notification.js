@@ -9,6 +9,8 @@ export default DS.Model.extend({
   targetType: DS.attr('string'),
   targetId: DS.attr('string'),
   read: DS.attr('boolean'),
+  createdAt: DS.attr('string'),
+  updatedAt: DS.attr('string'),
 
   actor: null,
   target: null,

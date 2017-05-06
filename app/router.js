@@ -17,6 +17,7 @@ Router.map(function() {
       this.route('new');
     });
     this.route('notifications', function() {});
+    this.route('search', function() {});
   });
   this.route('setup', function() {
     this.route('login');

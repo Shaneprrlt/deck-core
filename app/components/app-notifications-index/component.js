@@ -9,7 +9,7 @@ export default Ember.Component.extend({
 
   notifications: null,
 
-  sortPropertes: ['cretedAt:desc'],
+  sortPropertes: ['createdAt:desc'],
   sortedNotifcations: Ember.computed.sort('notifications', 'sortPropertes'),
 
   actions: {

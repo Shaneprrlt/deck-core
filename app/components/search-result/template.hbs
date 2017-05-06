@@ -1,0 +1,35 @@
+<div class="level">
+  <div class="level-left">
+
+    {{#if searchResult.isCard}}
+
+      <div class="level-item">
+
+        {{#if searchResult.card.cardType.isFeature}}
+          <span class="icon-feature">
+            <span class="path3"></span>
+          </span>
+        {{/if}}
+
+        {{#if searchResult.card.cardType.isBug}}
+          <span class="icon-bug"></span>
+        {{/if}}
+
+      </div>
+
+    {{/if}}
+
+    {{#if searchResult.isMessage}}
+
+      <div class="level-item">
+        <img src="https://placehold.it/100x100" height="30" />
+      </div>
+
+      <div class="level-item">
+        <div>{{searchResult.message.body}} <span>posted in {{searchResults.message.card.title}}</span></div>
+      </div>
+
+    {{/if}}
+
+  </div>
+</div>
