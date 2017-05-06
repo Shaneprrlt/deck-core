@@ -3,9 +3,9 @@
     <img src="https://placehold.it/100x100" height="30" />
   </div>
   <div class="column is-9">
-    <p><span>{{user.username}}</span> {{message.body}}</p>
+    <span>{{notification.notificationCopy}}</span>
   </div>
   <div class="column is-2">
-    {{message-timestamp message.createdAt}}
+    <span>{{message-timestamp notification.createdAt}}</span>
   </div>
 </div>

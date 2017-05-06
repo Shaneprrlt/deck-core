@@ -1,0 +1,11 @@
+& {
+  height: 100%;
+  padding: 25px;
+
+  section {
+
+    > div:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -16,6 +16,7 @@ Router.map(function() {
     this.route('decks', function() {
       this.route('new');
     });
+    this.route('notifications', function() {});
   });
   this.route('setup', function() {
     this.route('login');

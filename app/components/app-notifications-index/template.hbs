@@ -1,0 +1,28 @@
+<section>
+
+  <div>
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <span>Notifications</span>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <div {{action 'markAllAsRead'}}>
+            <span class="link">Mark all as read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <ul>
+      {{#each sortedNotifcations as |notification|}}
+        {{notification-item notification=notification}}
+      {{/each}}
+    </ul>
+  </div>
+
+</section>

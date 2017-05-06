@@ -1,3 +1,22 @@
 & {
-  
+  .columns {
+    .column:nth-child(1) {
+      padding-bottom: 0;
+
+      img {
+        border-radius: 4px;
+      }
+    }
+    .column:nth-child(2) {
+      p {
+        span {
+          color: #000000;
+          font-family: $avenir-lt-medium;
+        }
+      }
+    }
+    .column:nth-child(3) {
+      font-size: 15px;
+    }
+  }
 }
