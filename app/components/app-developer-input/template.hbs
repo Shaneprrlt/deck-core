@@ -1,0 +1,15 @@
+<div class="level">
+  <div class="level-left">
+    <div class="level-item">
+      {{input type="text" name="q" value=query placeholder="Search"}}
+    </div>
+  </div>
+</div>
+
+{{#if hasSearchResults}}
+  <div class="search-results-container">
+    {{#each filteredSearchResults as |developer|}}
+      {{app-developer-input/search-result app=app developer=developer}}
+    {{/each}}
+  </div>
+{{/if}}

@@ -1,7 +1,7 @@
 <div class="container application-navigator">
   <div class="level">
 
-    <div class="level-left">
+    <div class="level-left" {{action 'toggleUserMenu'}}>
       <div class="level-item">
         <img src="https://placehold.it/100x100" height="30" />
       </div>
@@ -29,3 +29,7 @@
 
   </div>
 </div>
+
+{{#if showUserMenu}}
+  {{application-navigator/user-menu team=team}}
+{{/if}}

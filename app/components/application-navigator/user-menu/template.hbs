@@ -1,0 +1,52 @@
+<ul>
+  <li class="team-heading">
+    <div class="level">
+
+      <div class="level-left">
+        <div class="level-item">
+          <img src="https://placehold.it/100x100" height="30" />
+        </div>
+        <div class="level-item">
+          {{team.name}}
+        </div>
+      </div>
+
+    </div>
+  </li>
+
+  <li class="separator"></li>
+
+  <li class="user-heading">
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <img src="https://placehold.it/100x100" height="30" />
+        </div>
+        <div class="level-item">
+          <span>{{user.name}}</span>
+          <span>@{{user.username}}</span>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <li class="separator"></li>
+
+  {{application-navigator/user-menu/menu-link text='Preferences' route='index'}}
+  {{application-navigator/user-menu/menu-link text='Notifications Settings' route='index'}}
+  {{application-navigator/user-menu/menu-link text='Manage Account' route='index'}}
+
+  <li class="separator"></li>
+
+  {{#if user.isAdmin}}
+
+    {{application-navigator/user-menu/menu-link text='Manage Apps' route='app.apps.index'}}
+    {{application-navigator/user-menu/menu-link text='Team Members' route='index'}}
+
+    <li class="separator"></li>
+
+  {{/if}}
+
+  <li {{action 'logout'}}>Sign Out</li>
+
+</ul>

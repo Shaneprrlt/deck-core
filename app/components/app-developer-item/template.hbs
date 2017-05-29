@@ -1,0 +1,19 @@
+<div class="level">
+  <div class="level-left">
+    <div class="level-item">
+      <img src="https://placehold.it/60x60" height="30" />
+    </div>
+    <div class="level-item">
+      <span>{{developer.name}} ({{developer.email}})</span>
+    </div>
+  </div>
+  <div class="level-right">
+    <div class="level-item" {{action 'toggleItemMenu'}}>
+      <span class="icon-more"></span>
+    </div>
+  </div>
+</div>
+
+{{#if showItemMenu}}
+  {{app-developer-item/item-menu app=app developer=developer}}
+{{/if}}

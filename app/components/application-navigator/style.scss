@@ -1,6 +1,9 @@
 & {
   width: 100%;
   max-width: 100%;
+  position: relative;
+  padding-top: 10px;
+  -webkit-app-region: drag;
 
   .container.application-navigator {
     width: 100%;
@@ -18,6 +21,8 @@
       }
 
       .level-left {
+        cursor: pointer;
+
         .level-item:nth-child(1) {
           img {
             display: block;
@@ -44,6 +49,7 @@
             padding: 6px 10px;
             width: 300px;
             height: auto !important;
+            -webkit-app-region: no-drag;
           }
         }
       }

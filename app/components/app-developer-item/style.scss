@@ -1,0 +1,9 @@
+& {
+  .level {
+    .level-right {
+      .level-item:last-child {
+        cursor: pointer;
+      }
+    }
+  }
+}

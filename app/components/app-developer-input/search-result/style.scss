@@ -1,0 +1,21 @@
+& {
+  cursor: pointer;
+  -webkit-transition: background-color .25s;
+  -moz-transition: background-color .25s;
+  transition: background-color .25s;
+  background-color: $white;
+
+  .level {
+    .level-left {
+      .level-item:nth-child(1) {
+        img {
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
+
+&:hover {
+  background-color: darken($white, 5%);
+}

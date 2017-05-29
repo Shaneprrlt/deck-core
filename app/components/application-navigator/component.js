@@ -10,6 +10,7 @@ export default Ember.Component.extend({
   team: null,
   notifications: null,
   query: null,
+  showUserMenu: false,
 
   didInsertElement() {
     this._super(...arguments);
@@ -37,6 +38,10 @@ export default Ember.Component.extend({
     openCreateCard() {
       this.get('casino').set('casino.fullscreen', false);
       this.get('routing').transitionTo('app.cards.new');
+    },
+
+    toggleUserMenu() {
+      this.set('showUserMenu', !this.get('showUserMenu'));
     }
   }
 

@@ -1,0 +1,97 @@
+<section class="hero is-fullheight">
+
+  <div class="hero-head">
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          {{#link-to 'app.apps.index'}}
+            <h1>{{fa-icon 'chevron-left'}} Create an App</h1>
+          {{/link-to}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-body">
+    <div>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <span>App Details</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            {{input type="text" value=app.name placeholder="Name" }}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <select onchange={{action "selectPlatform" value="target.value"}}>
+              <option disabled="true" selected="true">Platform</option>
+              {{#each platforms as |platform|}}
+                <option value={{platform.id}}>{{platform.name}}</option>
+              {{/each}}
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <span>App Developers</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            <span>Assign Developers so they can receive notifications
+                when new cards appear in this App's Deck.</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            {{app-developer-input app=app}}
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="columns">
+          <div class="column">
+            {{#each app.developers as |developer|}}
+              {{app-developer-item app=app developer=developer}}
+            {{/each}}
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="level">
+      <div class="level-right">
+        <div class="level-item">
+          <div class="button" {{action 'createApp'}}>
+            <span>Create</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>

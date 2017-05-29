@@ -6,6 +6,10 @@ export default Ember.Component.extend({
 
   apps: null,
   decks: null,
+  
+  filteredApps: Ember.computed.filter('apps', function(app) {
+    return app.get('isNew') === false;
+  }),
 
   actions: {
     setSelectedApp(app) {

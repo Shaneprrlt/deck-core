@@ -2,7 +2,7 @@
   <div class="column">
     <ul>
 
-      {{#each apps as |app|}}
+      {{#each filteredApps as |app|}}
         <li {{action 'setSelectedApp' app}}>
           <span class="app-badge">{{fa-icon app.icon}}</span>
           <span>{{app.name}}</span>
